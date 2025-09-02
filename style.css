@@ -78,3 +78,26 @@ footer {
   text-align: center;
   padding: 15px;
 }
+.admin-login, #adminPanel {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+#subscriptionsList {
+  margin: 20px 0;
+  text-align: right;
+}
+
+.subscription-item {
+  background: #f0fdf4;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border-right: 4px solid #22c55e;
+}
+
