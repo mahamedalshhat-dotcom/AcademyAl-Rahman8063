@@ -135,3 +135,24 @@
   <script src="script.js"></script>
 </body>
 </html>
+    <!-- لوحة التحكم -->
+    <section id="admin">
+      <h2>لوحة التحكم</h2>
+      <div class="admin-login" id="adminLoginForm">
+        <h3>تسجيل دخول الأدمن</h3>
+        <form onsubmit="adminLogin(event)">
+          <div class="form-group">
+            <label>كلمة المرور</label>
+            <input type="password" id="adminPassword" required>
+          </div>
+          <button type="submit" class="btn">دخول</button>
+        </form>
+      </div>
+
+      <div id="adminPanel" style="display:none;">
+        <h3>قائمة الاشتراكات</h3>
+        <div id="subscriptionsList"></div>
+        <button class="btn" onclick="clearAll()">مسح جميع الاشتراكات</button>
+      </div>
+    </section>
+
