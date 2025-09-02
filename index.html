@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أكاديمية الرحمن لتعليم القرآن الكريم</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- الهيدر -->
+  <header>
+    <div class="logo-container">
+      <div class="logo"><i class="fas fa-quran"></i></div>
+      <div>
+        <h1>أكاديمية الرحمن لتعليم القرآن الكريم</h1>
+        <p>نور القرآن يهدي قلوبنا</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- شريط التنقل -->
+  <nav>
+    <button onclick="showSection('auth')"><i class="fas fa-user"></i> تسجيل الدخول</button>
+    <button onclick="showSection('packages')"><i class="fas fa-book"></i> الباقات</button>
+    <button onclick="showSection('payment')"><i class="fas fa-credit-card"></i> الدفع</button>
+    <button onclick="showSection('subscription')"><i class="fas fa-calendar-check"></i> اشتراكي</button>
+    <button onclick="showSection('about')"><i class="fas fa-info-circle"></i> عن الأكاديمية</button>
+    <button onclick="showSection('contact')"><i class="fas fa-envelope"></i> التواصل</button>
+  </nav>
+
+  <!-- المحتوى -->
+  <main>
+    <!-- قسم تسجيل الدخول -->
+    <section id="auth" class="active">
+      <div class="auth-container">
+        <div class="auth-form">
+          <div class="auth-tabs">
+            <div class="auth-tab active" id="loginTab" onclick="showAuthForm('login')">تسجيل الدخول</div>
+            <div class="auth-tab" id="registerTab" onclick="showAuthForm('register')">تسجيل جديد</div>
+          </div>
+
+          <!-- تسجيل الدخول -->
+          <div id="loginForm" class="auth-form-content">
+            <form onsubmit="loginUser(event)">
+              <div class="form-group">
+                <label>البريد الإلكتروني</label>
+                <input type="email" id="loginEmail" required>
+              </div>
+              <div class="form-group">
+                <label>كلمة المرور</label>
+                <input type="password" id="loginPassword" required>
+              </div>
+              <button type="submit" class="btn">دخول</button>
+            </form>
+          </div>
+
+          <!-- تسجيل جديد -->
+          <div id="registerForm" class="auth-form-content" style="display:none;">
+            <form onsubmit="registerUser(event)">
+              <div class="form-group">
+                <label>الاسم الكامل</label>
+                <input type="text" id="regName" required>
+              </div>
+              <div class="form-group">
+                <label>البريد الإلكتروني</label>
+                <input type="email" id="regEmail" required>
+              </div>
+              <div class="form-group">
+                <label>كلمة المرور</label>
+                <input type="password" id="regPassword" required>
+              </div>
+              <button type="submit" class="btn">تسجيل</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم الباقات -->
+    <section id="packages">
+      <h2>الباقات التعليمية</h2>
+      <div class="programs">
+        <div class="card">
+          <h3>باقة 8 حصص</h3>
+          <p>300 جنيه</p>
+          <button class="btn" onclick="selectPackage('8 حصص',300,'EGP')">اشترك</button>
+        </div>
+        <div class="card">
+          <h3>باقة 12 حصة</h3>
+          <p>600 جنيه</p>
+          <button class="btn" onclick="selectPackage('12 حصة',600,'EGP')">اشترك</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم الدفع -->
+    <section id="payment">
+      <h2>الدفع</h2>
+      <div id="selectedPackageDetails"></div>
+      <form onsubmit="confirmPayment(event)">
+        <div class="form-group">
+          <label>تاريخ التحويل</label>
+          <input type="date" id="transferDate" required>
+        </div>
+        <button type="submit" class="btn">تأكيد الدفع</button>
+      </form>
+    </section>
+
+    <!-- قسم الاشتراك -->
+    <section id="subscription">
+      <h2>تفاصيل اشتراكك</h2>
+      <div id="subscriptionDetails">لا يوجد اشتراك بعد</div>
+    </section>
+
+    <!-- قسم عن الأكاديمية -->
+    <section id="about">
+      <h2>عن الأكاديمية</h2>
+      <p>أكاديمية الرحمن لتعليم وتحفيظ القرآن الكريم لجميع الأعمار.</p>
+    </section>
+
+    <!-- قسم التواصل -->
+    <section id="contact">
+      <h2>التواصل</h2>
+      <p>واتساب: 0100000000</p>
+    </section>
+  </main>
+
+  <!-- الفوتر -->
+  <footer>
+    <p>جميع الحقوق محفوظة © 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
